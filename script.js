@@ -1,4 +1,5 @@
 var headerHeader = true;
+var CardmainDivValue;
 // on click of back button
 let backHr = document.getElementById("back");
   backHr.addEventListener('click',()=>{
@@ -27,6 +28,8 @@ if (headerHeader) {
   hrader_back.style.display = "flex";
   let hrader_main = document.getElementById("main-header");
   hrader_main.style.display = "none";
+  let body  = document.getElementById('body')
+    body.style.backgroundColor = 'green'
 }
 
 var inputText = document.getElementById("input_text");
@@ -42,8 +45,9 @@ function popUpTask() {
 
 function AddTaskList() {
   let inputValue = document.getElementById("task_input");
-  console.log(card);
-  AddTask(CardmainDiv, inputValue.value);
+  // console.log(card);
+  console.log(CardmainDivValue)
+  AddTask(CardmainDivValue, inputValue.value);
   popUpTaskClose();
 }
 
@@ -57,7 +61,7 @@ function popUpClose() {
   popup1.style.display = "none";
 }
 
-var CardmainDiv;
+
 var card;
 function AddItems() {
   var inputText = document.getElementById("input_text");
@@ -84,6 +88,8 @@ function AddItems() {
       hrader_back.style.display = "flex";
       let hrader_main = document.getElementById("main-header");
       hrader_main.style.display = "none";
+      let body  = document.getElementById('body')
+      body.style.backgroundColor = 'green'
     
     }
     showOneCard(crd)
@@ -91,7 +97,7 @@ function AddItems() {
   let cardHeader = card.appendChild(header);
   cardHeader.classList.add("card-header");
   // make main card
-  CardmainDiv = document.createElement("div");
+  let CardmainDiv = document.createElement("div");
   let cardMain = card.appendChild(CardmainDiv);
   cardMain.classList.add("mainCard");
 
@@ -116,6 +122,8 @@ function AddItems() {
   createIcon.classList.add("iconCreateClass");
   //  functionaality
   createIcon.addEventListener("click", () => {
+    CardmainDivValue = CardmainDiv;
+    console.log(cardMain)
     popUpTask();
   });
 
@@ -157,14 +165,13 @@ function markAsDone(span, button) {
   button.classList.add("mrk-dn");
 }
 
-
+var cn;
 function showOneCard(card){
   let OneTskCon = document.getElementById("oneTsk")
   let mainCon = document.getElementById("main")
   mainCon.style.display = "none"
   OneTskCon.style.display = "grid"
-  OneTskCon.appendChild(card)
-  
+  cn = OneTskCon.appendChild(card)
   console.log(card) 
 }
 
@@ -173,6 +180,6 @@ function hideOneCard(card){
   let mainCon = document.getElementById("main")
   mainCon.style.display = "flex"
   OneTskCon.style.display = "none"
-  mainCon.appendChild(card)
+  mainCon.appendChild(cn)
   console.log(card)
 }

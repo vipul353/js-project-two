@@ -42,7 +42,10 @@
   }
   
   
-
+/* #overAll{
+    height: 100%;
+    width: 100%;
+} */
   
   .main-trip{
     display: flex;
@@ -224,7 +227,7 @@
   }
   
   .footerCs{
-    height: 18%;
+    height: 25%;
     width: 100%;
     display: flex;
     justify-content: right;
@@ -269,7 +272,7 @@
   .mrk-btn{
     height: 3rem;
     width: 9.0rem;
-    background: greenyellow;
+    background:aqua;
     border-radius: 10px;
     color: white;
   }
