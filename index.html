@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="st.css" />
+    <title>To do App</title>
+  </head>
+  <body>
+    <div class="test">
+      <div class="container">
+        <h2 class="txt" >Add new Task</h2>
+        <input type="text" id="task_input" value="" placeholder="Add New Task"><br>
+        <div class="pop-row">
+          <button class="btn" onclick="AddTaskList()">Add</button>
+          <button class="btn" onclick="popUpTaskClose()">Close</button>
+        </div>
+      </div>
+    </div>
+    <!-- first header -->
+    <header class="header" id="main-header">
+      <span class="add-item-text">
+        Task
+        <span class="add-item-subText">List</span>
+      </span>
+      <div style="display: flex" onclick="popUp()" id="pop">
+        <div class="circle">+</div>
+        <span class="add-item"> Add Items </span>
+      </div>
+    </header>
+        <!-- secound header -->
+    <header class="header" id="back">
+      <span class="add-item-text">
+        Go Back
+      </span>
+    </header>
+    <div class="main-trip" id="main"></div>
+    <div class="one-tsk" id="oneTsk"></div>
+
+    <div class="main-popup">
+      <div class="popup">
+        <h2 class="txt">Add new Task</h2>
+        <input
+          type="text"
+          id="input_text"
+          value=""
+          placeholder="Add New Task"
+        /><br />
+        <div class="pop-row">
+          <button class="btn" onclick="AddItems()">Add</button>
+          <button class="btn" onclick="popUpClose()">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
