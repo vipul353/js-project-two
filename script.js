@@ -3,6 +3,8 @@ var CardmainDivValue;
 // on click of back button
 let backHr = document.getElementById("back");
   backHr.addEventListener('click',()=>{
+    let returnMain = document.getElementById("body")
+    returnMain.style.background = "black"
    headerHeader = true
    if (headerHeader) {
     let hrader_main = document.getElementById("main-header");
@@ -113,6 +115,7 @@ function AddItems() {
   // add delete icons fuction
   deleteIcon.addEventListener("click", () => {
     deleteCard(cards);
+    DeleteOneCard(cn);
   });
 
   // add create  icon
@@ -137,7 +140,12 @@ function AddItems() {
 }
 
 function deleteCard(card) {
-  card.remove();
+  let OneTskCon = document.getElementById("oneTsk")
+  let mainCon = document.getElementById("main")
+
+    OneTskCon.remove()
+    card.remove()
+
 }
 
 function AddTask(CardmainDiv, TxtValue) {
@@ -166,6 +174,7 @@ function markAsDone(span, button) {
 }
 
 var cn;
+
 function showOneCard(card){
   let OneTskCon = document.getElementById("oneTsk")
   let mainCon = document.getElementById("main")
@@ -173,6 +182,11 @@ function showOneCard(card){
   OneTskCon.style.display = "grid"
   cn = OneTskCon.appendChild(card)
   console.log(card) 
+}
+
+function DeleteOneCard(){
+  console.log(cn);
+  // console.log(cn.remove());
 }
 
 function hideOneCard(card){

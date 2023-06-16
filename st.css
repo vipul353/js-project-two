@@ -66,15 +66,7 @@
     margin: 1.0rem;
   }
 
-  
-  /* .header {
-    padding-inline: 15rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 10rem;
-    background-color: aqua;
-  } */
+
   
   .add-item-text {
     color: white;
@@ -286,4 +278,14 @@
   .mrk-dn{
     text-decoration: line-through;
     font-style: italic;
+  }
+
+  @media screen and (max-width:425px) {
+    html{
+      font-size: 43%;
+    }
+    .header{
+      justify-content: center;
+      align-items: center;
+    }
   }
