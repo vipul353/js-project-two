@@ -88,6 +88,7 @@ function AddItems() {
     } else {
       let hrader_back = document.getElementById("back");
       hrader_back.style.display = "flex";
+      hrader_back.style.justifyContent = "center";
       let hrader_main = document.getElementById("main-header");
       hrader_main.style.display = "none";
       let body  = document.getElementById('body')
