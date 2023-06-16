@@ -116,7 +116,7 @@ function AddItems() {
   // add delete icons fuction
   deleteIcon.addEventListener("click", () => {
     deleteCard(cards);
-    DeleteOneCard(cn);
+    // DeleteOneCard(cn);
   });
 
   // add create  icon
@@ -143,9 +143,21 @@ function AddItems() {
 function deleteCard(card) {
   let OneTskCon = document.getElementById("oneTsk")
   let mainCon = document.getElementById("main")
-
-    OneTskCon.remove()
-    card.remove()
+  // OneTskCon.remove()
+  card.remove()
+ let m =  OneTskCon.children
+ let k = mainCon.children
+ for (let index = 0; index < m.length; index++) {
+  m[index].remove()
+ }
+//  for (let index = 0; index < k.length; index++) {
+//   // console.log(k[index])
+//   if(card==k[index])
+//   {k[index].remove()}
+//   console.log('hello')
+//  }
+ 
+    
 
 }
 
@@ -182,13 +194,13 @@ function showOneCard(card){
   mainCon.style.display = "none"
   OneTskCon.style.display = "grid"
   cn = OneTskCon.appendChild(card)
-  console.log(card) 
+  // console.log(card) 
 }
 
-function DeleteOneCard(){
-  console.log(cn);
-  // console.log(cn.remove());
-}
+// function DeleteOneCard(){
+//   console.log(cn);
+//   // console.log(cn.remove());
+// }
 
 function hideOneCard(card){
   let OneTskCon = document.getElementById("oneTsk")
