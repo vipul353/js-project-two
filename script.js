@@ -156,21 +156,10 @@ function AddItems() {
 }
 
 function deleteCard(card) {
-  let OneTskCon = document.getElementById("oneTsk");
-  let mainCon = document.getElementById("main");
-  // OneTskCon.remove()
+
+
   card.remove();
-  // let m = OneTskCon.children;
-  // let k = mainCon.children;
-  // for (let index = 0; index < m.length; index++) {
-  //   m[index].remove();
-  // }
-  //  for (let index = 0; index < k.length; index++) {
-  //   // console.log(k[index])
-  //   if(card==k[index])
-  //   {k[index].remove()}
-  //   console.log('hello')
-  //  }
+
 }
 
 function AddTask(CardmainDiv, TxtValue) {
@@ -200,22 +189,10 @@ function markAsDone(span, button) {
 
 var cn;
 
-function showOneCard(card) {
-  let OneTskCon = document.getElementById("oneTsk");
-  let mainCon = document.getElementById("main");
-  mainCon.style.display = "none";
-  OneTskCon.style.display = "grid";
-  cn = OneTskCon.appendChild(card);
-  // console.log(card)
-}
 
-// function DeleteOneCard(){
-//   console.log(cn);
-//   // console.log(cn.remove());
-// }
 
 function hideOneCard(card) {
-  let OneTskCon = document.getElementById("oneTsk");
+
   let mainCon = document.getElementById("main");
   let MainDivChildren = mainCon.children
   mainCon.style.display = "flex";
@@ -226,6 +203,4 @@ function hideOneCard(card) {
       MainDivChildren[i].style.display = "flex"
      }
   }
-  // mainCon.appendChild(cn);
-  // console.log(card);
 }
