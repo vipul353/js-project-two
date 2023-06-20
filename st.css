@@ -72,6 +72,7 @@
     color: white;
     font-size: 4rem;
     font-weight: 600;
+    cursor: pointer;
   }
   
   .add-item-subText {
@@ -209,6 +210,7 @@
     border-bottom: 1px solid black;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
   
   .card-header-text{

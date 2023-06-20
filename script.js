@@ -64,13 +64,13 @@ function popUpClose() {
 }
 
 // var card;
-var cr;
+var cr;// on select current task
 function AddItems() {
   var inputText = document.getElementById("input_text");
   let mainDiv = document.getElementById("main");
   let cards = document.createElement("div");
  let card = mainDiv.appendChild(cards);
-  let crd = cards;
+  // let crd = cards;
   card.classList.add("card");
 
   //   make header
