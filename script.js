@@ -2,11 +2,11 @@ var headerHeader = true;
 var CardmainDivValue;
 // on click of back button
 let backHr = document.getElementById("back");
-  backHr.addEventListener('click',()=>{
-    let returnMain = document.getElementById("body")
-    returnMain.style.background = "black"
-   headerHeader = true
-   if (headerHeader) {
+backHr.addEventListener("click", () => {
+  let returnMain = document.getElementById("body");
+  returnMain.style.background = "black";
+  headerHeader = true;
+  if (headerHeader) {
     let hrader_main = document.getElementById("main-header");
     hrader_main.style.display = "flex";
     let hrader_back = document.getElementById("back");
@@ -17,9 +17,9 @@ let backHr = document.getElementById("back");
     let hrader_main = document.getElementById("main-header");
     hrader_main.style.display = "none";
   }
-  hideOneCard(card)
-  })
-  //on  starting 
+  hideOneCard(cr);
+});
+//on  starting
 if (headerHeader) {
   let hrader_main = document.getElementById("main-header");
   hrader_main.style.display = "flex";
@@ -30,8 +30,8 @@ if (headerHeader) {
   hrader_back.style.display = "flex";
   let hrader_main = document.getElementById("main-header");
   hrader_main.style.display = "none";
-  let body  = document.getElementById('body')
-    body.style.backgroundColor = 'green'
+  let body = document.getElementById("body");
+  body.style.backgroundColor = "green";
 }
 
 var inputText = document.getElementById("input_text");
@@ -48,7 +48,7 @@ function popUpTask() {
 function AddTaskList() {
   let inputValue = document.getElementById("task_input");
   // console.log(card);
-  console.log(CardmainDivValue)
+  console.log(CardmainDivValue);
   AddTask(CardmainDivValue, inputValue.value);
   popUpTaskClose();
 }
@@ -63,14 +63,14 @@ function popUpClose() {
   popup1.style.display = "none";
 }
 
-
-var card;
+// var card;
+var cr;
 function AddItems() {
   var inputText = document.getElementById("input_text");
   let mainDiv = document.getElementById("main");
   let cards = document.createElement("div");
-  card = mainDiv.appendChild(cards);
-  let crd = cards
+ let card = mainDiv.appendChild(cards);
+  let crd = cards;
   card.classList.add("card");
 
   //   make header
@@ -79,7 +79,23 @@ function AddItems() {
   header.addEventListener("click", () => {
     console.log("");
     headerHeader = false;
-    console.log(headerHeader);
+    // console.log(headerHeader);
+    mainDiv.style.justifyContent = "center"
+    let MainDivChildren = mainDiv.children;
+    console.log(MainDivChildren);
+    for (let i = 0; i < MainDivChildren.length; i++) {
+      // console.log(i)
+      if (MainDivChildren[i] != card) {
+        
+       
+        MainDivChildren[i].style.display = "none"
+      }else{
+        cr = MainDivChildren[i]
+      }
+
+
+    }
+
     if (headerHeader) {
       let hrader_main = document.getElementById("main-header");
       hrader_main.style.display = "flex";
@@ -91,11 +107,10 @@ function AddItems() {
       hrader_back.style.justifyContent = "center";
       let hrader_main = document.getElementById("main-header");
       hrader_main.style.display = "none";
-      let body  = document.getElementById('body')
-      body.style.backgroundColor = 'green'
-    
+      let body = document.getElementById("body");
+      body.style.backgroundColor = "green";
     }
-    showOneCard(crd)
+    // showOneCard(crd);
   });
   let cardHeader = card.appendChild(header);
   cardHeader.classList.add("card-header");
@@ -127,7 +142,7 @@ function AddItems() {
   //  functionaality
   createIcon.addEventListener("click", () => {
     CardmainDivValue = CardmainDiv;
-    console.log(cardMain)
+    console.log(cardMain);
     popUpTask();
   });
 
@@ -141,24 +156,21 @@ function AddItems() {
 }
 
 function deleteCard(card) {
-  let OneTskCon = document.getElementById("oneTsk")
-  let mainCon = document.getElementById("main")
+  let OneTskCon = document.getElementById("oneTsk");
+  let mainCon = document.getElementById("main");
   // OneTskCon.remove()
-  card.remove()
- let m =  OneTskCon.children
- let k = mainCon.children
- for (let index = 0; index < m.length; index++) {
-  m[index].remove()
- }
-//  for (let index = 0; index < k.length; index++) {
-//   // console.log(k[index])
-//   if(card==k[index])
-//   {k[index].remove()}
-//   console.log('hello')
-//  }
- 
-    
-
+  card.remove();
+  // let m = OneTskCon.children;
+  // let k = mainCon.children;
+  // for (let index = 0; index < m.length; index++) {
+  //   m[index].remove();
+  // }
+  //  for (let index = 0; index < k.length; index++) {
+  //   // console.log(k[index])
+  //   if(card==k[index])
+  //   {k[index].remove()}
+  //   console.log('hello')
+  //  }
 }
 
 function AddTask(CardmainDiv, TxtValue) {
@@ -188,13 +200,13 @@ function markAsDone(span, button) {
 
 var cn;
 
-function showOneCard(card){
-  let OneTskCon = document.getElementById("oneTsk")
-  let mainCon = document.getElementById("main")
-  mainCon.style.display = "none"
-  OneTskCon.style.display = "grid"
-  cn = OneTskCon.appendChild(card)
-  // console.log(card) 
+function showOneCard(card) {
+  let OneTskCon = document.getElementById("oneTsk");
+  let mainCon = document.getElementById("main");
+  mainCon.style.display = "none";
+  OneTskCon.style.display = "grid";
+  cn = OneTskCon.appendChild(card);
+  // console.log(card)
 }
 
 // function DeleteOneCard(){
@@ -202,11 +214,18 @@ function showOneCard(card){
 //   // console.log(cn.remove());
 // }
 
-function hideOneCard(card){
-  let OneTskCon = document.getElementById("oneTsk")
-  let mainCon = document.getElementById("main")
-  mainCon.style.display = "flex"
-  OneTskCon.style.display = "none"
-  mainCon.appendChild(cn)
-  console.log(card)
+function hideOneCard(card) {
+  let OneTskCon = document.getElementById("oneTsk");
+  let mainCon = document.getElementById("main");
+  let MainDivChildren = mainCon.children
+  mainCon.style.display = "flex";
+  mainCon.style.justifyContent = "space-between";
+  for(let i=0;i<MainDivChildren.length;i++){
+     if (MainDivChildren[i]!=cr) {
+      console.log(MainDivChildren[i]);
+      MainDivChildren[i].style.display = "flex"
+     }
+  }
+  // mainCon.appendChild(cn);
+  // console.log(card);
 }
