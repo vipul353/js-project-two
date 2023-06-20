@@ -306,3 +306,21 @@
       justify-content: center;
     }
   }
+
+
+  @media screen and (max-width:768px) {
+    html{
+      font-size: 43%;
+    }
+    .header{
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header{
+    padding-inline: 5rem;
+    }
+
+    .main-trip{
+      justify-content: center;
+    }
+  }
