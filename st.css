@@ -2,16 +2,19 @@
     place-items: center;
     display: none;
     background-color: rgba(0, 0, 0, 0.8);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
+    width: 100vw;
+    height:100vh;
+    position: fixed;
+    top: 0%;
 }
 
 .one-tsk{
     place-items: center;
     display:none;
 }
+
+
+
 
 * {
     box-sizing: border-box;
@@ -103,14 +106,14 @@
   }
   
   .main-popup {
-    display: grid;
+    /* display: grid; */
     place-items: center;
     display: none;
     background-color: rgba(0, 0, 0, 0.8);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0%;
   }
   
   .popup {
@@ -304,14 +307,20 @@
 
     .main-trip{
       justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      padding-inline: 0;
     }
+    
+    .card{
+      height: 40rem;
+      width: 35rem;
+    }    
   }
 
 
   @media screen and (max-width:768px) {
-    html{
-      font-size: 43%;
-    }
+   
     .header{
       justify-content: space-between;
       align-items: center;

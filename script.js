@@ -38,11 +38,40 @@ var inputText = document.getElementById("input_text");
 function popUp() {
   let popup1 = document.querySelector(".main-popup");
   popup1.style.display = "grid";
+  let Scrollheight = document.body.scrollHeight;
+  let popMain = document.getElementById("mainPopUp")
+  popMain.style.height = Scrollheight
+  // let main = document.getElementById("main"); 
+  // let   children = main.children
+  // for (let i = 0; i < children.length; i++) {
+  //   // console.log(i)
+  //   children[i].style.fliter = 'blur'
+
+
+  // }
+  const elements = document.querySelectorAll('*');
+
+  elements.forEach((element) => {
+    element.style.overflowY = 'hidden';
+  });
+  
 }
 
 function popUpTask() {
+  // let Scrollheight = document.body.scrollHeight;
   let popup2 = document.querySelector(".test");
   popup2.style.display = "grid";
+  // popup2.style.height = Scrollheight.toString
+  // console.log();
+  const elements = document.querySelectorAll('*');
+
+  elements.forEach((element) => {
+    element.style.overflowY = 'hidden';
+  });
+
+  // let popMain = document.getElementById("mainPopUp")
+ 
+
 }
 
 function AddTaskList() {
@@ -56,11 +85,21 @@ function AddTaskList() {
 function popUpTaskClose() {
   let popup2 = document.querySelector(".test");
   popup2.style.display = "none";
+  const elements = document.querySelectorAll('*');
+  elements.forEach((element) => {
+    element.style.overflowY = 'unset';
+  });
+
 }
 
 function popUpClose() {
   let popup1 = document.querySelector(".main-popup");
   popup1.style.display = "none";
+  const elements = document.querySelectorAll('*');
+
+  elements.forEach((element) => {
+    element.style.overflowY = 'unset';
+  });
 }
 
 // var card;
