@@ -283,6 +283,12 @@
   .mrk-dn{
     text-decoration: line-through;
     font-style: italic;
+    text-align: center;
+  }
+
+
+  .mrk-dn-btn{
+    display: none;
   }
    
   .ClassNone{
@@ -292,6 +298,19 @@
   .ClassShow{
     display:flex;
   }
+
+  .no-data-here{
+     font-size: 3rem;
+    font-weight: 700;
+    color: red;
+    display: block;
+  }
+
+
+  .show-no-data{
+    display: block;
+  }
+
 
   @media screen and (max-width:425px) {
     html{

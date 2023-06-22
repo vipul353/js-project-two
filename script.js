@@ -107,6 +107,8 @@ var cr;// on select current task
 function AddItems() {
   var inputText = document.getElementById("input_text");
   let mainDiv = document.getElementById("main");
+   let noData = document.getElementById("no-data");
+   noData.style.display = "none";
   let cards = document.createElement("div");
  let card = mainDiv.appendChild(cards);
   // let crd = cards;
@@ -195,9 +197,20 @@ function AddItems() {
 }
 
 function deleteCard(card) {
+  let mainDiv = document.getElementById("main");
+  children     = mainDiv.children
+
+  if (  children.length==2) {
+    console.log("hello");
+    card.remove()
+    console.log(children);
+    let noData = document.getElementById("no-data");
+    noData.style.display = "block" 
+  }else  if (mainDiv.children.length>0){
+    card.remove()
+  }
 
 
-  card.remove();
 
 }
 
@@ -212,7 +225,7 @@ function AddTask(CardmainDiv, TxtValue) {
   taskDiv.appendChild(span);
   span.innerText = TxtValue;
   button.addEventListener("click", () => {
-    markAsDone(span, button);
+    markAsDone(span, button,taskDiv);
   });
 
   taskDiv.appendChild(button);
@@ -221,9 +234,11 @@ function AddTask(CardmainDiv, TxtValue) {
   button.classList.add("mrk-btn");
 }
 
-function markAsDone(span, button) {
+function markAsDone(span, button,taskDiv) {
   span.classList.add("mrk-dn");
-  button.classList.add("mrk-dn");
+  button.classList.add("mrk-dn-btn");
+  taskDiv.style.display = "flex"
+  taskDiv.style.justifyContent = "center"
 }
 
 var cn;
@@ -236,10 +251,20 @@ function hideOneCard(card) {
   let MainDivChildren = mainCon.children
   mainCon.style.display = "flex";
   mainCon.style.justifyContent = "space-between";
+  let noData = document.getElementById("no-data");
   for(let i=0;i<MainDivChildren.length;i++){
      if (MainDivChildren[i]!=cr) {
+    
       console.log(MainDivChildren[i]);
       MainDivChildren[i].style.display = "flex"
+      if (MainDivChildren[i]==noData){
+        console.log("hello");
+        noData.style.display = "none"
+      }
      }
   }
+  if (MainDivChildren.length==1) {
+    noData.style.display = "block"
+  }
+
 }
