@@ -1,354 +1,431 @@
 .test{
-    place-items: center;
-    display: none;
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 100vw;
-    height:100vh;
-    position: fixed;
-    top: 0%;
+  place-items: center;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height:100vh;
+  position: fixed;
+  top: 0%;
 }
 
 .one-tsk{
-    place-items: center;
-    display:none;
+  place-items: center;
+  display:none;
 }
 
 
 
 
 * {
-    box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: unset;
-  }
-  
-  html {
-    font-size: 62.5%;
-  }
-  
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: unset;
+}
+
+html {
+  font-size: 62.5%;
+}
 
 
-  
-  body {
-    padding: 0px;
-    margin: 0px;
-    background-color: black;
+
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: black;
+}
+
+.header {
+  padding-inline: 11rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10rem;
+
+}
+
+
+/* #overAll{
+  height: 100%;
+  width: 100%;
+} */
+
+.main-trip{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding-inline: 11rem;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+}
+
+
+.cards{
+  height: 30rem;
+  width: 24rem;
+  background-color: white;
+  border-radius: 15.0px;
+  margin: 1.0rem;
+}
+
+
+
+.add-item-text {
+  color: white;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.add-item-subText {
+  color: white;
+  font-size: 4rem;
+  font-weight: 200;
+
+}
+
+.back-item-subText {
+  color: white;
+  font-size: 4rem;
+  font-weight: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.img-bg
+{
+  /* background-color: white; */
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+}
+
+.circle {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.add-item {
+  color: white;
+  font-size: 3rem;
+  font-weight: 200;
+  padding-left: 1rem;
+  cursor: pointer;
+}
+
+.back-btn{
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 700;
+  cursor: pointer;
+  background:white;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+}
+
+.task-title{
+  color: white;
+  font-size: 5rem;
+  font-weight: 200;
+  padding-right: 14rem;
+  text-align: center;
+}
+
+.main-popup {
+  /* display: grid; */
+  place-items: center;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0%;
+}
+
+.popup {
+  width: 44.3rem;
+  height: 24.3rem;
+  background-color: white;
+  border-radius: 1.5rem;
+  text-align: center;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.pop-row {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 7rem;
+}
+
+#input_text,#task_input {
+  height: 10rem;
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid black;
+}
+
+.txt {
+  font-size: 3rem;
+  font-weight: 500;
+  color: orange;
+  height: 10rem;
+  display: inline-block;
+  width: 100%;
+  margin: 1rem;
+}
+
+.btn{
+  height: 4.0rem;
+  width: 8.0rem;
+  background: orange;
+  color: white;
+  font-size: 2.0rem;
+  font-weight: 500;
+  border: 1px solid black;
+  border-radius: 1.0rem;
+}
+
+.btn:hover{
+  background: rgb(208, 255, 0);
+}
+
+
+.container{
+  width: 44.3rem;
+  height: 24.3rem;
+  background-color: white;
+  border-radius: 1.5rem;
+  text-align: center;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.main-trip{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding-inline: 11rem;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+}
+
+
+.card{
+  height: 30rem;
+  width: 24rem;
+  background-color: white;
+  border-radius: 15.0px;
+  margin: 1.0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-header{
+  height: 18%;
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.card-header-text{
+  color: rgb(129, 13, 121);
+  font-size: 2.0rem;
+  font-weight: 500;
+
+}
+
+.footerCs{
+  height: 25%;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  padding-inline: 4.0rem;
+  align-items: center;
+}
+
+.iconDeleteClass{
+  height: 5.0rem;
+  width: 5.0rem;
+}
+
+.iconCreateClass{
+  height: 4.0rem;
+  width: 4.0rem;
+  background-color: aqua;
+  border-radius: 50%;
+}
+
+.mainCard{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding-block: 0.5rem;
+}
+
+.task-Row{
+  display: flex;
+  justify-content: space-between;
+  height: 4.0rem;
+  width: 100%;
+  margin-block: 0.0rem;
+  padding-inline: 1.0rem;
+  font-size: 3.0rem;
+  font-weight: 500;
+  color: black;
+}
+
+.mrk-btn{
+  height: 3rem;
+  width: 9.0rem;
+  background:aqua;
+  border-radius: 10px;
+  color: white;
+}
+
+.tsk-txt{
+  font-size: 2rem;
+  font-weight: 500;
+  color: black;
+}
+
+.mrk-dn{
+  text-decoration: line-through;
+  font-style: italic;
+  text-align: center;
+}
+
+
+.mrk-dn-btn{
+  display: none;
+}
+ 
+.ClassNone{
+  display: none;
+}
+
+.ClassShow{
+  display:flex;
+}
+
+.no-data-here{
+   font-size: 3rem;
+  font-weight: 700;
+  color: red;
+  display: block;
+}
+
+
+.show-no-data{
+  display: block;
+}
+
+
+@media screen and (max-width:425px) {
+  html{
+    font-size: 43%;
   }
-  
-  .header {
-    padding-inline: 15rem;
-    display: flex;
+  .header{
     justify-content: space-between;
     align-items: center;
-    height: 10rem;
-
   }
-  
-  
-/* #overAll{
-    height: 100%;
-    width: 100%;
-} */
-  
+  .header{
+  padding-inline: 5rem;
+  }
+
   .main-trip{
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    padding-inline: 11rem;
-    flex-wrap: wrap;
-    height: 100%;
-    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 0;
   }
-  
-  
-  .cards{
-    height: 30rem;
-    width: 24rem;
-    background-color: white;
-    border-radius: 15.0px;
-    margin: 1.0rem;
-  }
-
-
   
   .add-item-text {
     color: white;
-    font-size: 4rem;
+    font-size: 2.9rem;
     font-weight: 600;
     cursor: pointer;
   }
-  
+
+  .card{
+    height: 40rem;
+    width: 35rem;
+  }
+  .task-title{
+    font-size: 5rem;
+    font-weight: 200;
+    padding-right: 14rem;
+  }
   .add-item-subText {
     color: white;
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: 200;
   }
-  
-  .circle {
-    height: 4rem;
-    width: 4rem;
-    border-radius: 50%;
-    background-color: aqua;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-    font-weight: 700;
-    cursor: pointer;
-  }
-  
-  .add-item {
-    color: white;
-    font-size: 3rem;
-    font-weight: 200;
-    padding-left: 1rem;
-    cursor: pointer;
-  }
-  
-  .main-popup {
-    /* display: grid; */
-    place-items: center;
-    display: none;
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0%;
-  }
-  
-  .popup {
-    width: 44.3rem;
-    height: 24.3rem;
-    background-color: white;
-    border-radius: 1.5rem;
-    text-align: center;
-    padding: 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-  }
-  
-  .pop-row {
-    height: 100%;
-    width: 100%;
-    display: flex;
+}
+
+
+@media screen and (max-width:768px) {
+ 
+  .header{
     justify-content: space-between;
     align-items: center;
-    padding-inline: 7rem;
   }
-  
-  #input_text,#task_input {
-    height: 10rem;
-    width: 100%;
-    border-radius: 1rem;
-    border: 1px solid black;
+  .header{
+  padding-inline: 5rem;
   }
-  
-  .txt {
-    font-size: 3rem;
-    font-weight: 500;
-    color: orange;
-    height: 10rem;
-    display: inline-block;
-    width: 100%;
-    margin: 1rem;
-  }
-  
-  .btn{
-    height: 4.0rem;
-    width: 8.0rem;
-    background: orange;
-    color: white;
-    font-size: 2.0rem;
-    font-weight: 500;
-    border: 1px solid black;
-    border-radius: 1.0rem;
-  }
-  
-  .btn:hover{
-    background: rgb(208, 255, 0);
-  }
-  
 
-  .container{
-    width: 44.3rem;
-    height: 24.3rem;
-    background-color: white;
-    border-radius: 1.5rem;
-    text-align: center;
-    padding: 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-  }
-  
   .main-trip{
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    padding-inline: 11rem;
-    flex-wrap: wrap;
-    height: 100%;
-    width: 100%;
-  }
-  
-  
-  .card{
-    height: 30rem;
-    width: 24rem;
-    background-color: white;
-    border-radius: 15.0px;
-    margin: 1.0rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .card-header{
-    height: 18%;
-    width: 100%;
-    display: flex;
-    border-bottom: 1px solid black;
     justify-content: center;
-    align-items: center;
+  }
+  .task-title{
+    font-size: 2.5rem;
+    font-weight: 200;
+    padding-right: 2rem;
+  }
+
+
+  .add-item-text {
+    color: white;
+    font-size: 2.9rem;
+    font-weight: 600;
     cursor: pointer;
   }
-  
-  .card-header-text{
-    color: rgb(129, 13, 121);
-    font-size: 2.0rem;
-    font-weight: 500;
-  
-  }
-  
-  .footerCs{
-    height: 25%;
-    width: 100%;
-    display: flex;
-    justify-content: right;
-    padding-inline: 4.0rem;
-    align-items: center;
-  }
-  
-  .iconDeleteClass{
-    height: 5.0rem;
-    width: 5.0rem;
-  }
-  
-  .iconCreateClass{
-    height: 4.0rem;
-    width: 4.0rem;
-    background-color: aqua;
-    border-radius: 50%;
-  }
-  
-  .mainCard{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    padding-block: 0.5rem;
-  }
-  
-  .task-Row{
-    display: flex;
-    justify-content: space-between;
-    height: 4.0rem;
-    width: 100%;
-    margin-block: 0.0rem;
-    padding-inline: 1.0rem;
-    font-size: 3.0rem;
-    font-weight: 500;
-    color: black;
-  }
 
-  .mrk-btn{
-    height: 3rem;
-    width: 9.0rem;
-    background:aqua;
-    border-radius: 10px;
+  .add-item-subText {
     color: white;
+    font-size: 2.9rem;
+    font-weight: 200;
   }
 
-  .tsk-txt{
-    font-size: 2rem;
-    font-weight: 500;
-    color: black;
-  }
-
-  .mrk-dn{
-    text-decoration: line-through;
-    font-style: italic;
-    text-align: center;
-  }
-
-
-  .mrk-dn-btn{
-    display: none;
-  }
-   
-  .ClassNone{
-    display: none;
-  }
-
-  .ClassShow{
-    display:flex;
-  }
-
-  .no-data-here{
-     font-size: 3rem;
-    font-weight: 700;
-    color: red;
-    display: block;
-  }
-
-
-  .show-no-data{
-    display: block;
-  }
-
-
-  @media screen and (max-width:425px) {
-    html{
-      font-size: 43%;
-    }
-    .header{
-      justify-content: space-between;
-      align-items: center;
-    }
-    .header{
-    padding-inline: 5rem;
-    }
-
-    .main-trip{
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      padding-inline: 0;
-    }
-    
-    .card{
-      height: 40rem;
-      width: 35rem;
-    }    
-  }
-
-
-  @media screen and (max-width:768px) {
-   
-    .header{
-      justify-content: space-between;
-      align-items: center;
-    }
-    .header{
-    padding-inline: 5rem;
-    }
-
-    .main-trip{
-      justify-content: center;
-    }
-  }
+}

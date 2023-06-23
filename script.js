@@ -3,16 +3,14 @@ var CardmainDivValue;
 // on click of back button
 let backHr = document.getElementById("back");
 backHr.addEventListener("click", () => {
-  let returnMain = document.getElementById("body");
-  returnMain.style.background = "black";
   headerHeader = true;
   if (headerHeader) {
     let hrader_main = document.getElementById("main-header");
     hrader_main.style.display = "flex";
-    let hrader_back = document.getElementById("back");
+    let hrader_back = document.getElementById("back-header");
     hrader_back.style.display = "none";
   } else {
-    let hrader_back = document.getElementById("back");
+    let hrader_back = document.getElementById("back-header");
     hrader_back.style.display = "flex";
     let hrader_main = document.getElementById("main-header");
     hrader_main.style.display = "none";
@@ -23,10 +21,10 @@ backHr.addEventListener("click", () => {
 if (headerHeader) {
   let hrader_main = document.getElementById("main-header");
   hrader_main.style.display = "flex";
-  let hrader_back = document.getElementById("back");
+  let hrader_back = document.getElementById("back-header");
   hrader_back.style.display = "none";
 } else {
-  let hrader_back = document.getElementById("back");
+  let hrader_back = document.getElementById("back-header");
   hrader_back.style.display = "flex";
   let hrader_main = document.getElementById("main-header");
   hrader_main.style.display = "none";
@@ -41,14 +39,6 @@ function popUp() {
   let Scrollheight = document.body.scrollHeight;
   let popMain = document.getElementById("mainPopUp")
   popMain.style.height = Scrollheight
-  // let main = document.getElementById("main"); 
-  // let   children = main.children
-  // for (let i = 0; i < children.length; i++) {
-  //   // console.log(i)
-  //   children[i].style.fliter = 'blur'
-
-
-  // }
   const elements = document.querySelectorAll('*');
 
   elements.forEach((element) => {
@@ -80,6 +70,7 @@ function AddTaskList() {
   console.log(CardmainDivValue);
   AddTask(CardmainDivValue, inputValue.value);
   popUpTaskClose();
+
 }
 
 function popUpTaskClose() {
@@ -106,7 +97,14 @@ function popUpClose() {
 var cr;// on select current task
 function AddItems() {
   var inputText = document.getElementById("input_text");
+
+  let hrader_main = document.getElementById("main-header");
+  hrader_main.style.display = "flex";
+  let hrader_back = document.getElementById("back-header");
+  hrader_back.style.display = "none";
+
   let mainDiv = document.getElementById("main");
+  mainDiv.style.justifyContent = "space-between"
    let noData = document.getElementById("no-data");
    noData.style.display = "none";
   let cards = document.createElement("div");
@@ -121,6 +119,8 @@ function AddItems() {
     console.log("");
     headerHeader = false;
     // console.log(headerHeader);
+    let title = document.getElementById("task-name")
+    title.innerText = text.innerText
     mainDiv.style.justifyContent = "center"
     let MainDivChildren = mainDiv.children;
     console.log(MainDivChildren);
@@ -140,16 +140,14 @@ function AddItems() {
     if (headerHeader) {
       let hrader_main = document.getElementById("main-header");
       hrader_main.style.display = "flex";
-      let hrader_back = document.getElementById("back");
+      let hrader_back = document.getElementById("back-header");
       hrader_back.style.display = "none";
     } else {
-      let hrader_back = document.getElementById("back");
+      let hrader_back = document.getElementById("back-header");
       hrader_back.style.display = "flex";
-      hrader_back.style.justifyContent = "center";
+      hrader_back.style.justifyContent = "space-between";
       let hrader_main = document.getElementById("main-header");
       hrader_main.style.display = "none";
-      let body = document.getElementById("body");
-      body.style.backgroundColor = "green";
     }
     // showOneCard(crd);
   });
@@ -193,7 +191,7 @@ function AddItems() {
   text.classList.add("card-header-text");
   text.innerText = inputText.value;
   popUpClose();
-  console.log(inputText.value);
+  // console.log(inputText.value);
 }
 
 function deleteCard(card) {
@@ -205,7 +203,9 @@ function deleteCard(card) {
     card.remove()
     console.log(children);
     let noData = document.getElementById("no-data");
-    noData.style.display = "block" 
+    noData.style.display = "block"
+    let title = document.getElementById("task-name")
+       title.innerText = "" 
   }else  if (mainDiv.children.length>0){
     card.remove()
   }
@@ -258,7 +258,6 @@ function hideOneCard(card) {
       console.log(MainDivChildren[i]);
       MainDivChildren[i].style.display = "flex"
       if (MainDivChildren[i]==noData){
-        console.log("hello");
         noData.style.display = "none"
       }
      }
