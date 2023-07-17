@@ -102,16 +102,16 @@ function AddItems() {
   hrader_main.style.display = "flex";
   let hrader_back = document.getElementById("back-header");
   hrader_back.style.display = "none";
-
+   
   let mainDiv = document.getElementById("main");
   mainDiv.style.justifyContent = "space-between"
    let noData = document.getElementById("no-data");
    noData.style.display = "none";
+  //  start to make card
   let cards = document.createElement("div");
  let card = mainDiv.appendChild(cards);
   // let crd = cards;
   card.classList.add("card");
-
   //   make header
   let header = document.createElement("div");
   // on click of header of card
@@ -178,14 +178,14 @@ function AddItems() {
   let pureCreateIcon = footerJs.appendChild(createIcon);
   createIcon.src = "./images/add.png";
   createIcon.classList.add("iconCreateClass");
-  //  functionaality
+  //  functionality on click of create sub-task card 
   createIcon.addEventListener("click", () => {
     CardmainDivValue = CardmainDiv;
     console.log(cardMain);
     popUpTask();
   });
 
-  //  make header text
+  //  inseart text in the header div 
   let txt = document.createElement("div");
   let text = cardHeader.appendChild(txt);
   text.classList.add("card-header-text");
